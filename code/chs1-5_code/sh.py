@@ -7,12 +7,12 @@ class Shape:
     def move(self, deltaX, deltaY):
         self.x = self.x + deltaX
         self.y = self.y + deltaY
-class Square(Shape): 
+class Square(Shape):
     """Square Class:inherits from Shape"""
     def __init__(self, side=1, x=0, y=0):
         Shape.__init__(self, x, y)
         self.side = side
-class Circle(Shape): 
+class Circle(Shape):
     """Circle Class: inherits from Shape and has method area"""
     pi = 3.14159
     def __init__(self, r=1, x=0, y=0):
@@ -24,3 +24,12 @@ class Circle(Shape):
     def __str__(self):
         return "Circle of radius %s at coordinates (%d, %d)"\
                % (self.radius, self.x, self.y)
+
+if __name__ == '__main__':
+    c1 = Circle()
+    c2 = Circle(5, 15, 20)
+    print(c1)
+    print(c2)
+    print(c2.area())
+    c2.move(5, 6)
+    print(c2)
