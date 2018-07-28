@@ -14,8 +14,7 @@ def words_occur():
         # increment the occurrences count for this word
         occurs_dict[word] = occurs_dict.get(word, 0) + 1
     # Print out the results.
-    print("File %s has %d words (%d are unique)" \  #4
-      % (file_name, len(word_list), len(occurs_dict)))
+    print("File %s has %d words (%d are unique)" % (file_name, len(word_list), len(occurs_dict)))
     print(occurs_dict)
 if __name__ == '__main__':                          #5
     words_occur()
